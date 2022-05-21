@@ -1,75 +1,516 @@
-<html lang="en" style="zoom: 120%;">
+<html lang="en">
+
 
 <head>
+    <title>The Gabloxia · Sitio Web</title>
+
+    <link rel="stylesheet" href="https://tgxgang.xyz/stylo.css">
+    <link rel="icon" href="https://gabloxia.xyz/img/boc.png">
+
+    <meta property="og:image" content="https://gabloxia.xyz/img/boc.png">
+    <meta property="og:site_name" content="The Gabloxia">
+    <meta property="og:description" content="Biografia de The Gabloxia">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <meta property="og:keywords" content="TGX Gang, TGX scripts, tgx">
+
+    <meta charset="UTF-8">
+
+
+
     <style>
-        #content img {
-            max-width: 120px;
-            max-height: 160px;
-            float: right;
-            width: 80px;
-            border-radius: 4px;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        ::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+
+
+
+        body {
+            scroll-behavior: smooth;
+            text-decoration: none;
+            background-color: #101010;
+            display: flex;
+            justify-content: center;
+            margin: 0px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            align-items: center;
+        }
+
+        .down {
+            margin-top: 10px;
+            color: gray;
+            transition: background-color 0.2s;
+            display: flex;
+            text-decoration: none;
+            background-color: #161616;
+            border-radius: 5px;
+            padding: 2px 7px 2px 7px;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .down:hover {
+            background-color: #232323;
+            cursor: pointer;
+        }
+
+        .down:active {
+            background-color: #1e1e1e;
+            cursor: pointer;
+        }
+
+        .fotir {
+            width: 100%;
+            background: #151515;
+            position: fixed;
+            bottom: 0px;
+            color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inactivo {
+            color: rgb(190, 190, 190);
+            transition: background-color 0.2s;
+            display: flex;
+            text-decoration: none;
+            background-color: #161616;
+            margin: 0px 4px;
+            border-radius: 5px;
+            padding: 2px 7px 2px 7px;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inactivo:hover {
+            font-weight: 400;
+            background-color: #232323;
+            cursor: pointer;
+        }
+
+        .inactivo:active {
+            font-weight: 400;
+            background-color: #1e1e1e;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: gray;
+            transition: color 0.4s;
+
+        }
+
+        a:hover {
+
+            color: #BFBFBF;
+        }
+
+        .avatarimg {
+            max-width: 100px;
+            max-height: 100px;
+
+            border-radius: 8px;
+        }
+
+
+        .nombre {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .cuerpo {
+            text-align: left;
+        }
+
+        .cuerpo>* {
+
+            padding: 10px 0px 10px 0px;
+            border-top: 1px solid #1f1f1f;
+            border-radius: 5px;
+        }
+
+        .encabezado {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        ._100v {
+
+            color: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 70%;
+
+        }
+
+
+
+        @media screen and (min-width: 1000px) {
+            a>img {
+                height: 14px;
+                margin-right: 8px;
+            }
+
+            .topi {
+                background: #151515;
+                height: 56px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                justify-content: flex-start;
+                align-items: center;
+                position: absolute;
+                top: 0px;
+            }
+
+            .im {
+                width: 40px;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            .previsuAr {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+
+
+
+
+            .showcasi {
+                color: gray;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                height: 70%;
+                width: 100vw;
+            }
+
+            .dadArea {
+                border-radius: 5px;
+                padding: 25px;
+                width: 40%;
+                background: #131313;
+            }
+
+            .discord {
+                position: absolute;
+                right: 0px;
+                margin-right: 10px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .topi {
+                background: #151515;
+                height: 100%;
+                width: 37px;
+                display: flex;
+                flex-direction: column;
+                align-content: flex-start;
+                justify-content: flex-start;
+                align-items: center;
+                position: fixed;
+                left: 0px;
+                top: 0px;
+            }
+
+            .topi>* {
+                border-radius: 0px;
+                padding: 0px;
+                font-size: 5px;
+                display: flex;
+                flex-direction: column;
+                height: 37px;
+                width: 37px;
+            }
+
+            a>img {
+                height: 14px;
+                margin-right: 0px;
+            }
+
+            .showcasi {
+                color: gray;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                height: 80%;
+                width: 100vw;
+            }
+
+            .dadArea {
+                border-radius: 5px;
+                padding: 25px;
+                width: 60%;
+                background: #131313;
+            }
+
+
+
+
+            .avatarimg {
+                max-width: 54px;
+                max-height: 54px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+        }
+
+
+
+        .textArea {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .descripcion {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 16px;
+            color: white;
+            width: 85%;
+        }
+
+        .pandilla {
+            font-size: 13px;
+
+        }
+
+        .bordiHr {
+            border-top: 1px solid #222222;
+            border-radius: 5px;
+        }
+
+        .full {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            padding: 10%;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .tarjetasArea {
+            display: flex;
+            padding: 4%;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .tarjiE {
+            text-align: left;
+            margin: 15px;
+            border-radius: 8px;
+            background: #141414;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            transition: 0.25s ease;
+        }
+
+        .nombrePro {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .deskrip {
+            color: #7e7e7e;
+            font-size: 14px;
+        }
+
+
+        .AreaTexto {
+            font-size: 34px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .butisArea {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .butisArea>* {
+            width: 45%;
+        }
+
+        .iko {
+            height: 16px;
+            margin-right: 8px;
         }
     </style>
-    <meta name="description" content="The Gabloxi ">
-    <meta property="og:image" content="https://gabloxia.xyz/img/boc.png">
-    <link rel="icon" href="https://gabloxia.xyz/img/boc.png">
-    <link rel="stylesheet" href="https://wtf.gabloxia.xyz/sty.css">
-    <title>The Gabloxia - Wiki</title>
-    
-   
-
 </head>
 
-<body>
-    <div style="position: fixed;left: 0px;top: 0px;height: 100%;width: 100%;opacity: 0.5;background-image: url('https://cdn.discordapp.com/attachments/861305245245636678/958764929450672218/18.gif');background-size: cover;filter: blur(3px);">&gt;</div>
-    <audio src="https://github.com/TG609/cdn-pro/raw/main/audio/WhiteWine.mp3" autoplay="true" ></audio>
+
+<body cz-shortcut-listen="true">
+    <div class="topi">
+        <img class="im" src="https://gabloxia.xyz/img/boc.png">
+        <a href="/" class="inactivo">
+            <img src="https://cdn.y2k06.xyz/svg/homi.svg" alt="">
+            Inicio
+        </a>
+
+
+        <a href="#Proyectos" class="inactivo">
+            <img src="https://cdn.y2k06.xyz/svg/tool.svg" alt="">Proyectos</a>
+
+        <a href="https://tgxgang.xyz/discord" class="inactivo discord">
+            <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="">
+            Discord
+        </a>
+    </div>
+
+    <div class="_100v">
+        <div class="showcasi" id="showc">
+            <div class="dadArea">
+                <div class="previsuAr">
+                    <div class="encabezado">
+                        <div class="textArea">
+                            <span class="nombre">The Gabloxia</span>
+                            <a class="pandilla">The Gabloxia Gang</a>
+                            <span class="descripcion">Estudiante dedicado a la creacion
+                                de Software</span>
+
+
+                        </div>
+                        <img class="avatarimg" src="https://github.com/TG609/cdn-pro/raw/main/imgs/yo.jpg" alt="">
+
+                    </div>
+                    <div class="cuerpo">
+
+                        <div>
+                            <strong>Nacimiento: </strong>
+                            <span>24 de junio del 2006, México</span>
+                        </div>
+
+                        <div>
+                            <strong>Discord: </strong>
+                            <a href="https://discordapp.com/users/852643033325371394">The Gabloxia#6666</a>
+                        </div>
+
+                        <div>
+                            <strong>Instagram: </strong>
+                            <a href="https://www.instagram.com/gabloxia/">Gabloxia</a>
+                        </div>
+
+                        <div>
+                            <strong>Facebook: </strong>
+                            <a href="https://www.facebook.com/GabrielTrxsh">@GabrielTrxsh</a>
+                        </div>
+
+                        <div>
+                            <strong>Youtube: </strong>
+                            <a href="https://www.youtube.com/c/AAaWoW">AAaWoW</a>
+                        </div>
+
+                        <div>
+                            <strong>Roblox: </strong>
+                            <a href="https://discordapp.com/users/852643033325371394">TheGabloxie</a>
+                        </div>
+
+                    </div>
+                </div>
 
 
 
 
-
-
-    <div id="content">
-        <img src="https://github.com/TG609/cdn-pro/raw/main/imgs/yo.jpg"
-            align="right">
-        <h1>The Gabloxia</h1><a href="https://tgxgang.xyz">tgxgang.xyz</a>
-        <div id="desc">
-            <p>Soy un estudiante dedicado a la creacion de Software
-            </p>
+            </div>
         </div>
+    </div>
 
-        <div id="info">
-            
+    <div class="_100v bordiHr" id="Proyectos">
+        <div class="full">
+            <span class="AreaTexto">Proyectos</span>
+            <div class="tarjetasArea">
+                <div class="tarjiE">
+                    <img src="https://cdn.discordapp.com/attachments/882941526068564028/977681531546005615/TGX_Wallpaper.png"
+                        alt="">
 
-         
+                    <span class="nombrePro">The Gabloxia Gang</span>
+                    <span class="auti">00 · 09 · 2020</span>
+                    <span class="deskrip">Comunidad en discord, sitio web y exploit's hechos con XAML, C#</span>
+                    <div class="butisArea">
+                        <a class="down" href="https://tgxgang.xyz/" style="margin-right: 5px;">
+                            <img class="iko" src="https://cdn.y2k06.xyz/svg/redirect.svg" alt="">
+                            Ir</a>
+                        <a class="down" href="http://snuff.gabloxia.xyz/tgx/discord" style="margin-left: 5px;">
+                            <img class="iko" src="https://cdn.y2k06.xyz/svg/discord.svg" alt="">
+                            Discord</a>
+                    </div>
+                </div>
 
-            <div class="info-section">
-                <b>Nacimiento: </b>June 24, 2006, México
+                <div class="tarjiE">
+                    <img src="https://cdn.discordapp.com/attachments/882941526068564028/977692797094199316/senas.png"
+                        alt="">
+
+                    <span class="nombrePro">Sena's Whare</span>
+                    <span class="auti"> 17 · 04 · 2022</span>
+                    <span class="deskrip">Sitio web con HTML, CSS, JS y exploit hecho con XAML, C#</span>
+                    <div class="butisArea">
+                        <a class="down" href="https://y2k06.xyz/" style="margin-right: 5px;">
+                            <img class="iko" src="https://cdn.y2k06.xyz/svg/redirect.svg" alt="">
+                            Ir</a>
+                        <a class="down" href="http://snuff.gabloxia.xyz/sena/discord" style="margin-left: 5px;">
+                            <img class="iko" src="https://cdn.y2k06.xyz/svg/discord.svg" alt="">
+                            Discord</a>
+                    </div>
+                </div>
+
+
             </div>
-
-            <div class="info-section">
-                <b>Instagram: </b><a href="https://www.instagram.com/gabloxia/">Gabloxia</a>
-            </div>
-
-            <div class="info-section">
-                <b>Facebook: </b><a href="https://www.facebook.com/GabrielTrxsh">@GabrielTrxsh</a>
-            </div>
-
-            <div class="info-section">
-                <b>Youtube: </b><a href="https://www.youtube.com/channel/UCmZ3EjHMgxyYkOhwbFzR_yA/">AAaWoW</a>
-            </div>
-            <div class="info-section">
-                <b>Roblox: </b><a href="https://www.roblox.com/users/2803658577/profile">TheGabloxie</a>
-            </div>
-            <div class="info-section">
-                <b>Discord: </b><a href="https://discordapp.com/users/852643033325371394">The Gabloxia#6666</a>
-            </div>
-
-
         </div>
     </div>
 
 
+    <div class="fotir">
+        <span style="margin-bottom: 5px;font-size: 12px;margin-top: 5px;">Copyright Gabloxia 2022</span>
+    </div>
+
+
+
+
+
+
+
+
+
+
 </body>
+
 
 </html>
